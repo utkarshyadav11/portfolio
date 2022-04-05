@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url(../img/new.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 35px;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        
+        .logo {
+            color: rgb(255, 253, 253);
+            font-size: 35px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        
+        span {
+            color: #0aa3fc;
+        }
+        
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 25px;
+        }
+        
+        nav ul li a {
+            color: rgb(253, 252, 252);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        
+        nav ul li a:hover {
+            color: #1a95f4;
+            transition: .4s;
+        }
+        
+        .btn {
+            background-color: #2192e9;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 30px;
+            transition: transform .4s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.2);
+        }
+        
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+        }
+        
+        h1 {
+            color: transparent;
+            -webkit-text-stroke: 2px black;
+            margin: 20px 0px 20px;
+            font-size: 75px;
+            animation-name: MyAnimate;
+            animation-duration: 3s;
+            animation-direction: unset;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes MyAnimate {
+            from {
+                width: 300px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+        
+        h3 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 50px;
+        }
+        
+        h4 {
+            color: #fcfc;
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+        
+        .newslatter form {
+            width: 380px;
+            max-width: 100%;
+            position: relative;
+        }
+        
+        .newslatter form input:first-child {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 130px 14px 15px;
+            border: 2px solid #000000;
+            outline: none;
+            border-radius: 30px;
+        }
+        
+        .newslatter form input:last-child {
+            position: absolute;
+            display: inline-block;
+            outline: none;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            background-color: #1980ee;
+            color: white;
+            box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+            top: 6px;
+            right: 6px;
+        }
+        
+        .about {
+            width: 100%;
+            padding: 100px 0px;
+            background-color: #191919;
+        }
+        
+        .about img {
+            height: auto;
+            width: 430px;
+        }
+        
+        .about-text {
+            width: 550px;
+        }
+        
+        .main {
+            width: 1130px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .about-text h2 {
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            animation-name: MyAnimation;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes MyAnimation {
+            from {
+                width: 300px;
+            }
+            to {
+                width: 900px;
+            }
+        }
+        
+        .about-text h5 {
+            color: white;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+        }
+        
+        .about-text p {
+            color: rgba(251, 250, 251, 0.8);
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+        
+        button:hover {
+            background-color: transparent;
+            border: 2px solid #f9004d;
+            cursor: pointer;
+        }
+        
+        .service {
+            background: #101010;
+            width: 100%;
+            padding: 100px 0px;
+        }
+        
+        .title h2 {
+            color: white;
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+        
+        .card {
+            height: 365px;
+            width: 335px;
+            padding: 20px 35px;
+            background: #191919;
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .card i {
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0px;
+            color: #f9004d;
+        }
+        
+        h5 {
+            color: white;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+        
+        .pra p {
+            color: #fcfc;
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 25px;
+        }
+        
+        .card .button {
+            background-color: #fa08d9;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 9px 22px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+        
+        .card .button:hover {
+            background-color: transparent;
+            border: 2px solid #fa0fc3;
+            cursor: grab;
+        }
+        
+        .contact-me {
+            width: 100%;
+            height: 290px;
+            background: black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contact-me p {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        
+        .contact-me .button-two {
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+        
+        .contact-me .button-two:hover {
+            background-color: transparent;
+            border: 2px solid blue;
+            cursor: pointer;
+        }
+        
+        footer {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        footer p:nth-child(1) {
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        footer p:nth-child(2) {
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        
+        .social {
+            display: flex;
+        }
+        
+        .social a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(131, 162, 83);
+            border-radius: 50%;
+            margin: 22px 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .social a:hover {
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        
+        .end {
+            position: absolute;
+            color: rgb(242, 20, 20);
+            bottom: 35px;
+            font-size: 14px;
+        }
+        
+        img {
+            border-radius: 25px;
+            border: solid rgb(255, 24, 24);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+            <a href="#" class="btn">MY PROJECTS</a>
+        </nav>
+
+        <div class="content">
+            <h4>Hello, my name is</h4>
+            <h1>Utkarsh <span>Yadav</span></h1>
+            <h3>I'am a full stack developer.</h3>
+            <div class="newslatter">
+                <form>
+                    <input type="email" name="email" id="mail" placeholder="Enter Your Email">
+                    <input type="submit" name="submit" value="Lets Start">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="about">
+        <div class="main">
+            <img src="img/main-img.jpg">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h5>Developer <span>& Engineer</span></h5>
+                <p>A proactive and fast learning data enthusiast seeking an opportunity to work as a Developer. Committed to helping companies advance by helping them to develop strategic plans based on predictive modeling and findings</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="service">
+        <div class="title">
+            <h2>My skills </h2>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Frontend work</h5>
+                <div class="pra">
+                    <p>Web developers create and maintain websites. They are also responsible for the site's technical aspects, such as its performance and capacity, which are measures of a website's speed and how much traffic the site can handle. </p>
+
+                    <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="far fa-user"></i>
+                <h5>Backend work</h5>
+                <div class="pra">
+                    <p>Web developers create and maintain websites. They are also responsible for the site's technical aspects, such as its performance and capacity, which are measures of a website's speed and how much traffic the site can handle. .</p>
+
+                    <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="far fa-bell"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
+
+                    <p style="text-align: center;">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-me">
+        <p>I can make good websites and do frontend and backend work.</p>
+        <a class="button-two" href="#">Contact Me</a>
+    </div>
+
+
+    <footer>
+        <p>Utkarsh yadav</p>
+        <p>utkarshyadav6745@gmail.com</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="end">CopyRight By------ Utkarsh yadav</p>
+    </footer>
+</body>
+
+</html>
